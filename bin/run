@@ -91,7 +91,10 @@ remote $MY_IP_ADDR 1194 udp
 
 <connection>
 remote $MY_IP_ADDR 443 tcp-client
+socks-proxy-retry
+socks-proxy $MY_IP_ADDR 5523
 </connection>
+
 EOF
 
 [ -f client.http ] || cat >client.http <<EOF
